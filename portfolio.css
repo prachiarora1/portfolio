@@ -2,27 +2,81 @@ body{
     background-color: var(--bgcolor);
     font-family: sans-serif;
     line-height: 1.5;
-  /* background-image: linear-gradient(to bottom top, var(--bgcolor),var(--bgcolor),var(--bgcolor), #02a092);  */
-    background-repeat: no-repeat;
+ background-image: linear-gradient( to bottom right, #015e78 ,var(--bgcolor) ,#015e78);  
+    /* background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 120% 20%;
-    background-size: 400px 400px;
-    background-image: url("assets/leaves.png");
+    background-position: 120% 20%; */
+    /* background-size: 400px 400px; */
+    /* background-image: url("assets/leaves.png"); */
  
 }
+@media (max-width: 768px) {
+    .block #right{
+        display: none;
+      }
+      .block #left{
+        display: none;
+      }
+      .block #center{
+        margin: 20px;
+      }
+      .block #center #skill div{
+        width: 90%;
+      }
+      .block #center #experiences div{
+        width: 90%;
+      }
+    
+     
+  }
+  
+@media (max-width: 768px) {
+    nav .menu a:not(:last-child){
+        display:none;
+    } 
+    nav .menu button{
+        display:none;
+    } 
+   
+    .menu span.icon {
+        display: block;
+        float: right;
+        
+      }
+      .menu{
+        padding-right: 10px !important;
+    }
+    .wrap{
+        display: flex !important;
+     
+        justify-content: center;
+    }
+  }
+@media (max-width: 600px) {
+    .block #center .row{
+            display: flex;
+            flex-direction: column;
+      }
+  }
+
+
+
 /* header */
 nav{
     width: 100%;
-    height: 70px;
+    height: 75px;
     display: flex;
+    left:0;
+    right:0;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     overflow: hidden;
-    background-color:var(--bgcolor);
+    background-image: linear-gradient( to  right, #015e78 ,var(--bgcolor) );
     top: 0;
     z-index: 1000;
 }
+
 .menu a{
     text-decoration: none;
     color: var(--white);
@@ -33,6 +87,22 @@ nav{
 .menu a:hover{
     color :var(--hover)
 
+}
+.menu a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+.menu .icon {
+    display: none;
+    color: var(--white);
+  }
+  .menu .icon:hover .dropbtn{
+    display: none;
+    color: var(--white);
+  }
+.menu{
+    padding-right: 100px;
 }
 #left a{
     text-decoration: none;
@@ -46,10 +116,6 @@ button{
     background-color: #005f5796;
     border-radius: 5px;
 }
-.menu{
-    padding-right: 150px;
-}
-
 
 .block{
     display: flex;
@@ -132,30 +198,33 @@ h2{
 }
 #experience p{
     width: 60%;
-    padding:-1vh 20vh;
+    padding: 10px 20px;
    text-align:left;
    font-size: medium;
    text-align: justify;
 }
-#skill p{
-    width: 60%;
-    padding:-1vh 20vh;
-   text-align:left;
+#skill div{
+    display: block;
+    width: 55%;
+    padding:10px; 
+   float:left;
    font-size: medium;
    text-align: justify;
+   margin: 0px 20px 20px 0px;
+   border: 1px dotted rgba(19, 212, 226, 0);
 }
 #experiences div{
+    display: block;
     width: 45%;
     padding:10px; 
-   text-align:right;
    float:right;
    font-size: medium;
    text-align: justify;
    margin: 0px 0px 20px 20px;
-   border: 1px dotted rgb(19, 212, 226);
+   border: 1px dotted rgba(19, 212, 226, 0);
 }
 #contact p{
-    padding:2vh 20vh;
+    padding: 20px 20px;
    text-align:center;
    font-size: medium;
 }
@@ -174,7 +243,7 @@ h4{
     flex: 1;
     display: flex; 
     flex-direction: column;
-    right:-20px;
+    right:-50px;
     height:100vh;
     position:fixed;
     top: 71vh;
@@ -202,7 +271,7 @@ h4{
 hr{
     display:inline-block;
     margin: 7px 5px;
-    width:60vh ;
+    width:50vh ;
 }
 #right a:hover{
     color: var(--hover);
@@ -212,8 +281,11 @@ hr{
 section{
    padding: 100px 0px;
     width: 100%;
-    height:70vh;
+    min-height:70vh;
+    max-height:fit-content !important;
+    overflow: hidden;
 }
+
 .heading{
     font-size: 4.4vh;margin: 0px auto ;
     color :var(--hover);
@@ -267,13 +339,68 @@ h3{
 .footer{
     text-align: center;
     color:var(--textcolor);
+    display: flex;
+    justify-content: center;
+}
+.wrap{
+    display: none;
+
+}
+.wrap a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    
 }
 
 
 :root {
     --bgcolor:#054b45;
     --hover:  #92ffed;
-    --textcolor: #87ACA3;
+    --textcolor: #8abbaf;
     --black:black;
     --white:white;
   }
+
+
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #43b2c5cc;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
