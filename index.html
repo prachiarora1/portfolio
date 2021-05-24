@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="assets/logo4.png" />
      <link rel="stylesheet" type="text/css" href="portfolio.css">
+   
      <script src="https://use.fontawesome.com/a08f555c07.js"></script>
     <script src="portfolio.js"></script>
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    
 </head> 
-<body >
+<body data-spy="scroll" data-target=".menu" data-offset="50">
     <header>
-        <nav>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="logo">
                 <title>Prachi Arora Logo</title>
               
@@ -23,8 +26,9 @@
                 </svg>
             </a>
             </div>
-            <div class="menu" >
-                <a href="#about">About</a>
+            <div class="menu"  >
+                
+                <a href="#about" class="active">About</a>
                 <a href="#experiences">Experience</a>
                 <a href="#skill">Skill</a>
                 <a href="#contact">Contact</a>
@@ -50,6 +54,7 @@
         </nav>
 
         <div class="block">
+           
             <div id="left">
                 <a href="https://github.com/prachiarora1"><i class="fa fa-github fa-lg"></i></a>
                <a href="https://linkedin.com/in/prachi-arora-09">
@@ -64,8 +69,8 @@
              </a>
                 <!-- <i class="fa fa-codepen fa-lg"></i> -->
             </div>
-            <div id="center">
-                <section class='row' id="about" class="section">
+            <div id="center" >
+                <section class='row' id="about" class="sec">
                     <div>
                         <p  style="font-style: italic; " class="heading">Hey! I am <p style="font-size: 7.4vh; margin: 0px; color:#c2faf1">Prachi Arora</p></p>
                         
@@ -78,24 +83,30 @@
                         <img src="assets/myPhoto.jpg"  width="200" height="250">
                     </div>
                 </section>
-                <section id="experiences" class="section" >
+                <section id="experiences" class="sec" >
                      <h2 style=" float: right;"><hr >Experience</h2>  
                 </br>
+                <div class= "grid-container">
                     <div>
-                        <h3 >1. Monitoring Application</h3>
+                    </div>
+                    <div>
+                        
+                    <h3> 1.Monitoring Application</h3>
                     <p>
                      Designed and Implemented a dashboard for Monitoring Traffic Data linked to our platform for the customers. The application tracks key performance indicators and triggers notifications to the user.
                         Working closely with backend team to decide data flow of the application and help structure the API’s
                         Created and Implemented unit test cases during the development lifecycle of the application.
 
-                </p>
-                <h4 >(2018-2019)</h4></br>
-                <h4 >Frontend Developer - WIPRO Limited</h4>
+                    </p>
+                         <h4 >(2018-2019)</h4></br>
+                         <h4 >Frontend Developer - WIPRO Limited</h4>
               
                     </div>
-                    <br/>  <br/>  <br/>  <br/>  <br/>
-                    <div >
-                        <h3 >2. Blackhawk Dashboard </h3>
+                    <div> </div>
+                    <div>  </div>
+                    
+                    <div>
+                        <h3 >  2.Blackhawk Dashboard </h3>
                     <p>
                         A dashboard that presents data sets from different angles for greater insight. Allows the user to choose the level and complexity of the data, from detailed up to one second to the collective for weeks, months, and year.
                         Created self-contained, reusable, and testable modules and components.
@@ -104,23 +115,26 @@
                 <h4 >(2019-2020)</h4><br/>
                 <h4 >Senior Frontend Developer - WIPRO Limited</h4>
                     </div>
-                    <br/>  <br/>  <br/>  <br/>  <br/>
+                    <div></div>
+                    <div></div>
                     <div >
-                        <h3 >3. System Health Monitoring</h3>
+                        <h3 >3.System Health Monitoring </h3>
                     <p>
                         A dashboard that presents data status from start point to receiving end.
                         Converted raw data to actionable user insight, designed low fidelity to high fidelity wireframes.
                         Converted UX designs into working web application.
                         
-                </p>
+                    </p>
                 <h4 >(2020-Present)</h4></br>
                 <h4 >Senior Frontend Developer - WIPRO Limited</h4>
                     </div>
+                </div>
                 </section>
                
-                <section id="skill" class="section">
+                <section id="skill" class="section ">
                         <h2 style=" float: left;" >Skill<hr></h2>
                     </br>
+                   
                     <div style="display: inline;">
                         <p >Over the past 3 years, as a front-end Developer, I have designed, developed and launched, highly responsive websites and presented complex data in charts with advanced technologies.
                             Designed developed front-end by using Angular, Typescript, HTL5, CSS, Material Design. Built 60+ components in 3 different Modules using Angular.
@@ -138,6 +152,7 @@
                              <li>Adobe XD </li>     
                     </ul>
                     </div>
+                    
                        
                 </section>
                 <section id="contact" class="section">
@@ -147,6 +162,7 @@
                         </p><button onclick=sendEmail()>Say Hello</button> 
                         
                 </section>
+               
                 <div class="wrap" >
                     <a href="https://github.com/prachiarora1"><i class="fa fa-github fa-lg"></i></a>
                    <a href="https://linkedin.com/in/prachi-arora-09">
@@ -166,6 +182,7 @@
             <div id=right>
                 <a href="mailto:prachiarora0111@gmail.com">prachiarora0111@gmail.com</a>
             </div>
+        </div>
         </div>
     </header>
 </body>

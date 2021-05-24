@@ -2,13 +2,8 @@ body{
     background-color: var(--bgcolor);
     font-family: sans-serif;
     line-height: 1.5;
- background-image: linear-gradient( to bottom right, #015e78 ,var(--bgcolor) ,#015e78);  
-    /* background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 120% 20%; */
-    /* background-size: 400px 400px; */
-    /* background-image: url("assets/leaves.png"); */
- 
+  
+    background-image: linear-gradient( to bottom right, #015e78 ,var(--bgcolor) ,#015e78);   
 }
 @media (max-width: 768px) {
     .block #right{
@@ -24,10 +19,16 @@ body{
         width: 90%;
       }
       .block #center #experiences div{
-        width: 90%;
+        width: 95%;
+        padding: 10px 0px;
       }
-    
-     
+      .block #experiences .grid-container {
+        display: block;
+        width: 100%;
+        justify-content: center;
+       
+      }
+
   }
   
 @media (max-width: 768px) {
@@ -51,12 +52,24 @@ body{
      
         justify-content: center;
     }
+   #skill hr{
+        width:20vh ;
+   }
+   #experiences hr{
+    width:20vh ;
+}
   }
 @media (max-width: 600px) {
     .block #center .row{
             display: flex;
             flex-direction: column;
       }
+      #skill hr{
+        width:15vh ;
+    }
+    #experiences hr{
+        width:15vh ;
+    }
   }
 
 
@@ -77,6 +90,13 @@ nav{
     z-index: 1000;
 }
 
+.active {
+    font-family: 'Droid Sans', serif;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 50px;
+  }
 .menu a{
     text-decoration: none;
     color: var(--white);
@@ -88,10 +108,7 @@ nav{
     color :var(--hover)
 
 }
-.menu a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
+
   
 .menu .icon {
     display: none;
@@ -148,7 +165,7 @@ polyline:hover{
     stroke:  var(--hover);
     stroke-linecap: round;
   }
-  
+
 /* content */
 
  #left{
@@ -169,6 +186,7 @@ i{
 i:hover{
     color: var(--hover);
  }
+ 
 #left::after{
     content: "";
     display: block;
@@ -181,6 +199,7 @@ i:hover{
 #center {
     margin: 100px 180px 0px 180px;
     flex: 5;  
+    scroll-behavior: smooth;
 }
 #center p{
     color :#DDFFE7;
@@ -196,9 +215,17 @@ h2{
     margin: 0px auto; 
    
 }
+ #experiences .grid-container {
+    display: grid;
+    grid-template-columns: 45% 45% ;
+    grid-template-rows: auto auto ;
+    grid-gap: 5%;
+  }
+  
+ 
 #experience p{
-    width: 60%;
-    padding: 10px 20px;
+    
+padding: 10px 20px;
    text-align:left;
    font-size: medium;
    text-align: justify;
@@ -207,21 +234,17 @@ h2{
     display: block;
     width: 55%;
     padding:10px; 
-   float:left;
+   float:right;
    font-size: medium;
    text-align: justify;
    margin: 0px 20px 20px 0px;
    border: 1px dotted rgba(19, 212, 226, 0);
 }
 #experiences div{
-    display: block;
-    width: 45%;
-    padding:10px; 
-   float:right;
+    width: 100%;
+
    font-size: medium;
    text-align: justify;
-   margin: 0px 0px 20px 20px;
-   border: 1px dotted rgba(19, 212, 226, 0);
 }
 #contact p{
     padding: 20px 20px;
@@ -278,12 +301,13 @@ hr{
     transition: 0.4s;
  }
 
+
 section{
    padding: 100px 0px;
     width: 100%;
-    min-height:70vh;
+    min-height:45vh;
     max-height:fit-content !important;
-    overflow: hidden;
+   
 }
 
 .heading{
