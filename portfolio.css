@@ -72,6 +72,9 @@ body {
   #experiences hr {
     width: 15vh;
   }
+  #experiences div .dHeight {
+    height: 0px;
+  }
 }
 
 /* header */
@@ -406,7 +409,9 @@ h3 {
   right: 45px;
   font-size: 60px;
 }
-
+.dHeight {
+  height: 600px;
+}
 :root {
   --bgcolor: #735c75;
   --hover: #c2afff;
