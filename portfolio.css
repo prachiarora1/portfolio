@@ -128,11 +128,14 @@ nav {
 }
 button {
   padding: 10px;
-  border-color: var(--hover);
+  border-color: var(--bgcolor);
   border-style: 1px;
-  color: var(--hover);
-  background-color: var(--button);
+  color: var(--bgcolor);
+  background-color: var(--white);
   border-radius: 5px;
+}
+button a {
+  color: var(--bgcolor) !important;
 }
 
 .block {
@@ -185,6 +188,7 @@ i {
 }
 i:hover {
   color: var(--hover);
+  transform: scale(1.4);
 }
 
 #left::after {
@@ -331,8 +335,8 @@ li:before {
 }
 
 img {
-  border-right: 8px solid var(--white);
-  border-bottom: 8px solid var(--white);
+  border-right: 8px solid var(--bgcolor);
+  border-bottom: 8px solid var(--bgcolor);
   padding: 20px;
   margin-left: 90px;
   filter: drop-shadow(8px 8px 10px #bba6c4);
